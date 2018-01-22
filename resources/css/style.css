@@ -1,0 +1,15 @@
+/* Universal Styles */
+
+.container {
+
+}
+
+/* Header */
+
+.fixed-header {
+  height: 64px;
+}
+
+.fixed-header img {
+  padding-left: 24px;
+}
