@@ -7,7 +7,9 @@
 /* Header */
 
 .fixed-header {
+  display: flex;
   height: 64px;
+  position: fixed;
 }
 
 .fixed-header img {
