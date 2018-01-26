@@ -66,7 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 700px;
+  height: 570px;
 }
 
 .information img {
@@ -79,7 +79,7 @@ body {
 .left {
   width: 60%;
   padding: 0 24px;
-  border-right: 1px solid #c0c0c0;
+  /* border-right: 1px solid #c0c0c0; */
 }
 
 .left h2 {
@@ -101,7 +101,7 @@ body {
 .info img {
   width: 35%;
   height: 100%;
-  padding: 16px;
+  padding-top: 32px;
 }
 
 .info .text {
@@ -115,24 +115,70 @@ body {
 
 .start-learning {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   background-color: #c0c0c0;
 }
 
 .start-learning h3 {
-  padding-top: 32px;
-  width: 100%;
   text-align: center;
+  padding: 32px 0;
+}
+
+.start {
+  display: flex;
+  padding: 0 72px 32px 72px;
 }
 
 .learn {
-  width: 15%;
-  margin: 32px 72px;
   background-color: white;
+  margin-right: 32px;
 }
 
 .learn img {
   width: 100%;
   height: auto;
+}
+
+/* Thesis */
+
+.thesis-title {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.thesis {
+  display: flex;
+}
+
+.thesis h3 {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.thesis-left {
+  width: 60%;
+  margin-left: 24px;
+  padding-bottom: 32px;
+}
+
+.thesis-left video {
+  width: 100%;
+  height: auto;
+  padding: 0 24px 24px 0;
+}
+
+.thesis-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.thesis-right img {
+  width: 35%;
+  height: auto;
+}
+
+.thesis-right .text {
+  display: flex;
+  flex-direction: column;
 }
