@@ -6,18 +6,18 @@ body {
 }
 
 .container {
-  width: 1024px;
+  /* width: 1024px; */
 }
 
 /* Header */
 
 .fixed-header {
+  width: 1024px;
   display: flex;
   height: 64px;
   position: fixed;
   align-items: center;
   background-color: white;
-  /* border: 1px solid black; */
 }
 
 .fixed-header img {
@@ -69,16 +69,15 @@ body {
   height: 570px;
 }
 
-.information img {
-  width: 60%;
+.information .left img {
+  width: 100%;
   height: auto;
-  padding: 32px 24px;
   /* border-right: 1px solid #c0c0c0; */
 }
 
 .left {
   width: 60%;
-  padding: 0 24px;
+  padding: 32px 24px;
   /* border-right: 1px solid #c0c0c0; */
 }
 
@@ -92,16 +91,21 @@ body {
 
 .right {
   width: 35%;
+  padding-top: 16px;
 }
 
 .info {
   display: flex;
 }
 
+.info:hover {
+  background-color: grey;    /*Change color*/
+}
+
 .info img {
   width: 35%;
   height: 100%;
-  padding-top: 32px;
+  padding: 16px;
 }
 
 .info .text {
@@ -157,14 +161,13 @@ body {
 
 .thesis-left {
   width: 60%;
-  margin-left: 24px;
+  margin: 0 24px;
   padding-bottom: 32px;
 }
 
 .thesis-left video {
   width: 100%;
   height: auto;
-  padding: 0 24px 24px 0;
 }
 
 .thesis-right {
@@ -176,9 +179,43 @@ body {
 .thesis-right img {
   width: 35%;
   height: auto;
+  padding: 16px;
 }
 
 .thesis-right .text {
   display: flex;
   flex-direction: column;
+  width: 65%;
+}
+
+.thesis-right .box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.thesis-right .box:hover {
+  background-color: grey;      /*Change color*/
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  border-top: 1px solid grey;
+  height: 64px;
+}
+
+footer p {
+  flex-grow: 1;
+  padding-left: 24px;
+  padding-top: 16px;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  padding: 16px 5px;
 }
