@@ -1,12 +1,21 @@
 /* Universal Styles */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+
 body {
   width: 1024px;
   margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #4d4d4d;
 }
 
 .container {
   /* width: 1024px; */
+}
+
+p {
+  line-height: 1.25rem;
 }
 
 /* Header */
@@ -14,41 +23,47 @@ body {
 .fixed-header {
   width: 1024px;
   display: flex;
-  height: 64px;
+  height: 4rem;
   position: fixed;
   align-items: center;
   background-color: white;
 }
 
 .fixed-header img {
-  padding-left: 24px;
+  padding-left: 1.5rem;
   height: 50px;
 }
 
 .colmar {
-
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .academy {
+  font-size: 1.25rem;
   flex-grow: 1;
+  color: #b3b3b3;
 }
 
 .desktop-nav ul {
   display: flex;
-  padding-right: 16px;
+  padding-right: 1rem;
 }
 
 .desktop-nav li {
-  padding: 0 8px;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+
 }
 
 /* Banner */
 
 .banner {
   display: flex;
-  padding-top: 64px;
-  background-color:	#c0c0c0;
+  padding-top: 4rem;
+  background-color:	#dcdcdc;
   align-items: center;
+  /* flex-direction: column; */
 }
 
 .banner img {
@@ -56,8 +71,26 @@ body {
   padding: 32px 24px;
 }
 
-.banner .text-box {
+.banner .text-box h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 1.5rem;
+  line-height: 1.25;
+}
 
+.banner .text-box p {
+  font-size: 1.25rem;
+  padding-bottom: 2rem;
+  line-height: 1.75rem;
+}
+
+.button {
+  width: 70%;
+  display: block;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 8px;
 }
 
 /* Information */
@@ -72,26 +105,49 @@ body {
 .information .left img {
   width: 100%;
   height: auto;
-  /* border-right: 1px solid #c0c0c0; */
 }
 
 .left {
   width: 60%;
   padding: 32px 24px;
-  /* border-right: 1px solid #c0c0c0; */
+  border-right: 1px solid #c0c0c0;
 }
 
-.left h2 {
+.left h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  padding-top: 32px;
   padding-bottom: 24px;
 }
 
 .left p {
   padding-bottom: 24px;
+  font-size: 0.8rem;
+}
+
+.left span {
+  font-size: 0.75rem;
 }
 
 .right {
   width: 35%;
   padding-top: 16px;
+}
+
+.right .text h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.right .text p {
+  font-size: 0.75rem;
+  padding: 8px 0;
+}
+
+.right .text a {
+  font-size: 0.8rem;
+  color: #0066ff;
+  text-decoration: none;
 }
 
 .info {
@@ -118,24 +174,27 @@ body {
 /* Start learning */
 
 .start-learning {
-  display: flex;
-  flex-direction: column;
   background-color: #c0c0c0;
 }
 
-.start-learning h3 {
+.start-learning h2 {
   text-align: center;
-  padding: 32px 0;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .start {
   display: flex;
-  padding: 0 72px 32px 72px;
+  flex-wrap: wrap;
+  padding: 0 56px 16px 56px;
 }
 
 .learn {
+  width: 29%;
   background-color: white;
-  margin-right: 32px;
+  margin: 16px;
 }
 
 .learn img {
@@ -143,9 +202,29 @@ body {
   height: auto;
 }
 
+.learn h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 16px;
+  padding-top: 16px;
+}
+
+.learn h5 {
+  font-size: 0.8rem;
+  padding: 8px 16px;
+}
+
+.learn p {
+  font-size: 0.8rem;
+  padding-left: 16px;
+  padding-bottom: 24px;
+}
+
 /* Thesis */
 
 .thesis-title {
+  font-size: 2rem;
+  font-weight: 800;
   text-align: center;
   padding: 32px 0;
 }
@@ -154,7 +233,7 @@ body {
   display: flex;
 }
 
-.thesis h3 {
+.thesis h2 {
   text-align: center;
   padding: 32px 0;
 }
@@ -168,6 +247,17 @@ body {
 .thesis-left video {
   width: 100%;
   height: auto;
+}
+
+.thesis-left h3 {
+  font-size: 1.25rem;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+.thesis-left p {
+  font-size: 0.8rem;
 }
 
 .thesis-right {
@@ -194,6 +284,15 @@ body {
   align-items: center;
 }
 
+.thesis-right .text h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.thesis-right .text p {
+  padding: 8px 0;
+}
+
 .thesis-right .box:hover {
   background-color: grey;      /*Change color*/
 }
@@ -203,11 +302,12 @@ body {
 footer {
   display: flex;
   border-top: 1px solid grey;
-  height: 64px;
+  height: 80px;
 }
 
 footer p {
   flex-grow: 1;
+  font-size: 0.75rem;
   padding-left: 24px;
   padding-top: 16px;
 }
@@ -217,5 +317,6 @@ footer ul {
 }
 
 footer ul li {
+  font-size: 0.75rem;
   padding: 16px 5px;
 }
