@@ -3,15 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 
 body {
-  width: 1024px;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #4d4d4d;
-}
-
-.container {
-  /* width: 1024px; */
 }
 
 p {
@@ -21,12 +16,14 @@ p {
 /* Header */
 
 .fixed-header {
-  width: 1024px;
+  width: 100%;
   display: flex;
   height: 4rem;
   position: fixed;
   align-items: center;
   background-color: white;
+  box-shadow: 0 0 10px #00b3b3;
+  z-index: 1;
 }
 
 .fixed-header img {
@@ -53,7 +50,10 @@ p {
 .desktop-nav li {
   font-size: 1rem;
   padding: 0 0.5rem;
+}
 
+.desktop-nav li:hover {
+  text-shadow: 2px 2px 2px #00b3b3;
 }
 
 /* Banner */
@@ -63,7 +63,6 @@ p {
   padding-top: 4rem;
   background-color:	#dcdcdc;
   align-items: center;
-  /* flex-direction: column; */
 }
 
 .banner img {
@@ -87,22 +86,28 @@ p {
 .button {
   width: 70%;
   display: block;
-  background-color: gray;
+  background-color: #808080;
   color: white;
   text-align: center;
   padding: 8px;
+  border-radius: 10px;
+  transition: all 250ms linear;
+}
+
+.button:hover {
+  background-color: #00b3b3;
+  color: #4d4d4d;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px #808080;
 }
 
 /* Information */
 
-.information {
+.main-div-one {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 570px;
 }
 
-.information .left img {
+.main-div-one .left img {
   width: 100%;
   height: auto;
 }
@@ -110,7 +115,6 @@ p {
 .left {
   width: 60%;
   padding: 32px 24px;
-  border-right: 1px solid #c0c0c0;
 }
 
 .left h3 {
@@ -152,10 +156,15 @@ p {
 
 .info {
   display: flex;
+  opacity: 0.5;
+  transition: all 250ms linear;
 }
 
 .info:hover {
-  background-color: grey;    /*Change color*/
+  background-color: #dcdcdc;
+  opacity: 1;
+  border-radius: 0 0 40px 0;
+  box-shadow: 3px 3px 3px #00b3b3;
 }
 
 .info img {
@@ -173,11 +182,11 @@ p {
 
 /* Start learning */
 
-.start-learning {
+.main-div-two {
   background-color: #c0c0c0;
 }
 
-.start-learning h2 {
+.main-div-two h2 {
   text-align: center;
   padding-top: 32px;
   padding-bottom: 16px;
@@ -189,12 +198,22 @@ p {
   display: flex;
   flex-wrap: wrap;
   padding: 0 56px 16px 56px;
+  height: auto;
 }
 
 .learn {
   width: 29%;
+  height: auto;
   background-color: white;
   margin: 16px;
+  opacity: 0.5;
+  transition: all 250ms linear;
+}
+
+.learn:hover {
+  opacity: 1;
+  border-radius: 0 0 40px 0;
+  box-shadow: 3px 3px 3px #00b3b3;
 }
 
 .learn img {
@@ -229,11 +248,11 @@ p {
   padding: 32px 0;
 }
 
-.thesis {
+.main-div-three {
   display: flex;
 }
 
-.thesis h2 {
+.main-div-three h2 {
   text-align: center;
   padding: 32px 0;
 }
@@ -282,6 +301,15 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  opacity: 0.5;
+  transition: all 250ms linear;
+}
+
+.thesis-right .box:hover {
+  background-color: #dcdcdc;
+  opacity: 1;
+  border-radius: 0 0 40px 0;
+  box-shadow: 3px 3px 3px #00b3b3;
 }
 
 .thesis-right .text h3 {
@@ -291,10 +319,6 @@ p {
 
 .thesis-right .text p {
   padding: 8px 0;
-}
-
-.thesis-right .box:hover {
-  background-color: grey;      /*Change color*/
 }
 
 /* Footer */
@@ -319,4 +343,88 @@ footer ul {
 footer ul li {
   font-size: 0.75rem;
   padding: 16px 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .banner {
+    flex-direction: column;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .banner .text-box h1 {
+    font-size: 1.75rem;
+  }
+  .banner .text-box p {
+    font-size: 1rem;
+  }
+  .banner .text-box {
+    margin: 32px 16px;
+  }
+  .button {
+    margin-bottom: 2rem;
+  }
+  .left h3 {
+    font-size: 1.25rem;
+  }
+  .right, .thesis-right {
+    margin-right: 1rem;
+  }
+  .right .text h4 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .learn {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .main-div-one, .main-div-three {
+    flex-direction: column;
+  }
+  .left, .thesis-left {
+    width: 90%;
+  }
+  .right, .thesis-right {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .learn {
+    width: 90%;
+  }
+  .right .text h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner .text-box {
+    width: 100%;
+    text-align: center;
+  }
+  .button {
+    width: 95%;
+  }
+  .left, .thesis-left h3, .thesis-left p, .thesis-right {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+  .info {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .info img {
+    width: 80%;
+  }
+  .info .text {
+    width: 90%;
+    padding: 0 0 1rem 1rem;
+  }
 }
