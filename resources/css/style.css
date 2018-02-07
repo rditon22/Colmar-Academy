@@ -13,6 +13,11 @@ p {
   line-height: 1.25rem;
 }
 
+a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
 /* Header */
 
 .fixed-header {
@@ -50,10 +55,15 @@ p {
 .desktop-nav li {
   font-size: 1rem;
   padding: 0 0.5rem;
+  transition: all 250ms linear;
 }
 
 .desktop-nav li:hover {
   text-shadow: 2px 2px 2px #00b3b3;
+}
+
+.mobile-header {
+  display: none;
 }
 
 /* Banner */
@@ -105,6 +115,7 @@ p {
 
 .main-div-one {
   display: flex;
+  background-color: #f2f2f2;
 }
 
 .main-div-one .left img {
@@ -239,6 +250,29 @@ p {
   padding-bottom: 24px;
 }
 
+.start-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.learn-mobile {
+  margin: 4px;
+  transition: all 250ms linear;
+}
+
+.learn-mobile h4 {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #dcdcdc;
+}
+
+.learn-mobile h4:hover {
+  background-color: #c0c0c0;
+}
+
 /* Thesis */
 
 .thesis-title {
@@ -246,10 +280,12 @@ p {
   font-weight: 800;
   text-align: center;
   padding: 32px 0;
+  background-color: #f2f2f2;
 }
 
 .main-div-three {
   display: flex;
+  background-color: #f2f2f2;
 }
 
 .main-div-three h2 {
@@ -282,7 +318,7 @@ p {
 .thesis-right {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
 }
 
 .thesis-right img {
@@ -325,6 +361,7 @@ p {
 
 footer {
   display: flex;
+  background-color: #f2f2f2;
   border-top: 1px solid grey;
   height: 80px;
 }
@@ -384,11 +421,40 @@ footer ul li {
 }
 
 @media only screen and (max-width: 740px) {
+  .fixed-header {
+    display: none;
+  }
+  .mobile-header {
+    width: 100%;
+    display: flex;
+    height: 4rem;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 0 10px #00b3b3;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-header nav {
+    flex-grow: 1;
+  }
+  .mobile-header nav ul {
+    display: flex;
+  }
+  .mobile-header nav ul li {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .mobile-header img {
+    height: 40px;
+  }
   .main-div-one, .main-div-three {
     flex-direction: column;
   }
   .left, .thesis-left {
     width: 90%;
+    margin: 0 auto;
   }
   .right, .thesis-right {
     width: 90%;
@@ -406,9 +472,11 @@ footer ul li {
   .banner .text-box {
     width: 100%;
     text-align: center;
+    padding-right: 4px;
   }
   .button {
     width: 95%;
+    padding: 8px 6px;
   }
   .left, .thesis-left h3, .thesis-left p, .thesis-right {
     display: none;
@@ -426,5 +494,24 @@ footer ul li {
   .info .text {
     width: 90%;
     padding: 0 0 1rem 1rem;
+  }
+  .start {
+    display: none;
+  }
+  .start-mobile {
+    display: flex;
+  }
+  .main-div-two {
+    background-color: #f2f2f2;
+  }
+  .main-div-two h2 {
+    background-color: #f2f2f2;
+  }
+  footer p {
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+  }
+  footer ul {
+    display: none;
   }
 }
