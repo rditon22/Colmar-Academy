@@ -41,7 +41,7 @@
         <div class="text-box">
           <h1>Learn something<br /> new everyday</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <span class="button">Start here</span>
+          <a href="#"><span class="button">Start here</span></a>
         </div>
       </div>
     </header>
@@ -84,61 +84,89 @@
 
     <!--Start learning section-->
     <div class="main-div-two">
-      <h2>Start learning</h2>
+      <h2 class="title learning">Start learning</h2>
       <div class="start" role="presentation">
         <div class="learn">
+          <a href="#">
           <img src="./resources/images/course-software.jpg" alt="Two Apple moniters">
           <h4>Software engineering</h4>
           <h5>COURSES</h5>
           <P>Web Development, Mobile Development, iOT, APIs</p>
+          </a>
         </div>
         <div class="learn">
+          <a href="#">
           <img src="./resources/images/course-computer-art.jpg" alt="Hand holding a smart phone">
           <h4>Computer art</h4>
           <h5>COURSES</h5>
           <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Compter Animation</p>
+          </a>
         </div>
         <div class="learn">
+          <a href="#">
           <img src="./resources/images/course-design.jpg" alt="Hands holding a camera">
           <h4>Design</h4>
           <h5>COURSES</h5>
           <p>User Experience Design, User Research, Visual Design</p>
+          </a>
         </div>
         <div class="learn">
+          <a href="#">
           <img src="./resources/images/course-data.jpg" alt="Laptop on a table">
           <h4>Data</h4>
           <h5>COURSES</h5>
           <p>Data Science, Big Data, SQL, Data Visualization</p>
+          </a>
         </div>
         <div class="learn">
+          <a href="#">
           <img src="./resources/images/course-business.jpg" alt="Chess board">
           <h4>Business</h4>
           <h5>COURSES</h5>
           <p>Product Development, Business Development, Startup</p>
+          </a>
         </div>
         <div class="learn">
+          <a href="#">
           <img src="./resources/images/course-marketing.jpg" alt="Smart watch on someones wrist">
           <h4>Marketing</h4>
           <h5>COURSES</h5>
           <p>Analytics, Content Marketing, Mobile Marketing</p>
+          </a>
         </div>
       </div>
       <div class="start-mobile">
-        <div class="learn-mobile"><h4>Software engineering</h4></div>
-        <div class="learn-mobile"><h4>Computer art</h4></div>
-        <div class="learn-mobile"><h4>Design</h4></div>
-        <div class="learn-mobile"><h4>Data</h4></div>
-        <div class="learn-mobile"><h4>Business</h4></div>
-        <div class="learn-mobile"><h4>Marketing</h4></div>
+        <div class="learn-mobile"><a href="#"><h4>Software engineering</h4></a></div>
+        <div class="learn-mobile"><a href="#"><h4>Computer art</h4></a></div>
+        <div class="learn-mobile"><a href="#"><h4>Design</h4></a></div>
+        <div class="learn-mobile"><a href="#"><h4>Data</h4></a></div>
+        <div class="learn-mobile"><a href="#"><h4>Business</h4></a></div>
+        <div class="learn-mobile"><a href="#"><h4>Marketing</h4></a></div>
       </div>
     </div>
 
       <!--Thesis section-->
 
-    <h2 class="thesis-title">Thesis exhibit</h2>
+    <h2 class="title thesis">Thesis exhibit</h2>
     <div class="main-div-three">
       <div class="thesis-left">
-        <video src="./resources/videos/thesis.mp4" alt="Short video time lapse of building from day to night"></video>
+        <!--Video-->
+        <div class="video-container">
+          <a href="javascript:void(0)" onclick="this.style.display = 'none'; document.getElementById('hidden').style.display = 'block';playVid()">
+            <i class="fa fa-play-circle fa-5x">
+              <!-- ::before -->
+            </i>
+          </a>
+          <video id="vid" src="./resources/videos/thesis.mp4" alt="Short video time lapse of building from day to night" onclick="play();"></video>
+          <div id="hidden" style="display: none"></div>
+        </div>
+        <script>
+         var vid = document.getElementById("vid");
+         function playVid() {
+           vid.play();
+         }
+         </script>
+         <!--End of Video-->
         <h3>Reimagine urban</h3>
         <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
       </div>
@@ -146,15 +174,19 @@
         <div class="box">
           <img src="./resources/images/thesis-fisma.jpg" alt="A hand writing on paper next to smart phone">
           <div class="text" role="presentation">
+            <a href="#">
             <h3>Fisma: Design and Prototype</h3>
             <p>Designer showcase of new prototype product</p>
+            </a>
           </div>
         </div>
         <div class="box">
           <img src="./resources/images/thesis-now-and-then.jpg" alt="Empire State building">
           <div class="text" role="presentation">
+            <a href="#">
             <h3>Now and then</h3>
             <p>Research about New York</p>
+            </a>
           </div>
         </div>
       </div>
